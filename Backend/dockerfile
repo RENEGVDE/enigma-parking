@@ -1,0 +1,4 @@
+FROM azul/zulu-openjdk-alpine:11
+ARG JAR_FILE=out/artifacts/ParkingProject_jar//*.jar
+COPY ${JAR_FILE} ParkingProject.jar
+ENTRYPOINT ["java","-jar","/ParkingProject.jar"]
